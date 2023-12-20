@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer'
 import Details from './pages/details/Details'
 import SearchResult from './pages/searchResults/SearchResults'
 import PageNotFound from './pages/404/pageNotFound'
+import Explore from './pages/explore/Explore'
 
 function App () {
   const dispatch = useDispatch()
@@ -42,7 +43,7 @@ function App () {
           <Route path='/' element={<Home />} />
           <Route path="/:mediaType/:id" element={<Details />} />
                 <Route path="/search/:query" element={<SearchResult />} />
-                {/* <Route path="/explore/:mediaType" element={<Explore />} /> */}
+                <Route path="/explore/:mediaType" element={<Explore />} />
                 <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
