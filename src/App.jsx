@@ -7,6 +7,9 @@ import { getApiConfiguration } from './store/homeSlice'
 import { useEffect } from 'react'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import Details from './pages/details/Details'
+import SearchResult from './pages/searchResults/SearchResults'
+import PageNotFound from './pages/404/pageNotFound'
 
 function App () {
   const dispatch = useDispatch()
@@ -37,10 +40,10 @@ function App () {
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
-          {/* <Route path="/:mediaType/:id" element={<Details />} />
+          <Route path="/:mediaType/:id" element={<Details />} />
                 <Route path="/search/:query" element={<SearchResult />} />
-                <Route path="/explore/:mediaType" element={<Explore />} />
-                <Route path="*" element={<PageNotFound />} /> */}
+                {/* <Route path="/explore/:mediaType" element={<Explore />} /> */}
+                <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>
