@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getApiConfiguration } from './store/homeSlice'
 import { useEffect } from 'react'
 import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 function App () {
   const dispatch = useDispatch()
@@ -41,7 +42,7 @@ function App () {
                 <Route path="/explore/:mediaType" element={<Explore />} />
                 <Route path="*" element={<PageNotFound />} /> */}
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </>
   )
